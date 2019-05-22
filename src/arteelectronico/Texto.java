@@ -16,10 +16,10 @@ public class Texto extends javax.swing.JFrame {
      */
     public Texto() {
         initComponents();
-        o1.setLocation(25, 80);
-        o2.setLocation(25, 80);
         o3.setVisible(false);
         o4.setVisible(false);
+        o5.setVisible(false);
+        o6.setVisible(false);
     }
 
     /**
@@ -39,12 +39,15 @@ public class Texto extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         o3 = new javax.swing.JButton();
         o4 = new javax.swing.JButton();
+        o5 = new javax.swing.JButton();
+        o6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         area.setColumns(20);
+        area.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
         area.setRows(5);
-        area.setText("Una chica que está en segundo año de derecho ha vuelto a la ciudad donde creció después de haber hecho su primer año en otro país. Está buscando apartamentos que queden cerca de su universidad para que todo sea más fácil. \nEncuentra dos apartamentos \n1. 5 minutos de la universidad pero por un camino totalmente solo y peligroso \n2. 20 minutos de la universidad pero por un camino más transitado, pero al ser más transitado ocurren muchos trancones \n");
+        area.setText("Una chica que está en segundo año \nde derecho ha vuelto a la ciudad \ndonde creció después de haber hecho \nsu primer año en otro país. Está buscando \napartamentos que queden cerca de su \nuniversidad para que todo sea más fácil. \nEncuentra dos apartamentos \n1. 5 minutos de la universidad pero por un camino \ntotalmente solo y peligroso \n2. 20 minutos de la universidad pero por un camino \nmás transitado, pero al ser más transitado ocurren \nmuchos trancones. \n");
         jScrollPane1.setViewportView(area);
 
         o2.setText("op2");
@@ -68,6 +71,11 @@ public class Texto extends javax.swing.JFrame {
         jLabel2.setText("Opcion 2");
 
         o3.setText("op3");
+        o3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                o3ActionPerformed(evt);
+            }
+        });
 
         o4.setText("op4");
         o4.addActionListener(new java.awt.event.ActionListener() {
@@ -76,74 +84,153 @@ public class Texto extends javax.swing.JFrame {
             }
         });
 
+        o5.setText("op5");
+        o5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                o5ActionPerformed(evt);
+            }
+        });
+
+        o6.setText("op6");
+        o6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                o6ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1)
+                .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(190, 190, 190)
+                .addGap(189, 189, 189)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(o1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(9, 9, 9)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(o3, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(o2, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(o4, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(179, 179, 179))
-            .addComponent(jScrollPane1)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(o1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(o3, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(o5, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(1, 1, 1)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(120, 120, 120)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(o4, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(o6, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(o2, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(128, 128, 128)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(192, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(o2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(o1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(o6, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(o5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(o4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(o3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(42, Short.MAX_VALUE))
+                    .addComponent(o1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(o2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(o3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(o4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void o1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_o1ActionPerformed
-        String txt = " Cuando encuentra el apartamento que quería, empieza a llamar al camión de la mudanza, esperando en la acera a que el camión llegue se encuentre con un indigente que le pide dinero ella lo observa y le da 4 mil pesos porque sabe que ese hombre debe de estar pasando hambre; muy a su pesar el hombre se levanta se mete a la tienda que queda enfrente de su casa a comprar alcohol y emborracharse. \n"
-                + "El camión de mudanza nunca llega, llegaría dentro de un día , porque los hombres se perdieron por el camino peligroso y nada transitado. \n"
-                + "Al día siguiente tiene que llevar ropa que ya ha usado porque la mudanza nada que llegaba a sus clases regulares y para cuando vuelve el camión ya está esperándola y comienza a descargar sus cosas.";
-        String ant = area.getText();
-        area.setText(ant + txt);
+        String txt = "Cuando encuentra el apartamento que quería, empieza \na llamar al camión de la mudanza, esperando en la acera \na que el camión llegue se encuentre con un indigente que \nle pide dinero ella lo observa y le da 4 mil pesos porque \nsabe que ese hombre debe de estar pasando hambre; muy a su\npesar el hombre se levanta se mete a la tienda que queda\nenfrente de su casa a comprar alcohol y emborracharse. \n"
+                + "El camión de mudanza nunca llega, llegaría dentro de \nun día , porque los hombres se perdieron por \nel camino peligroso y nada transitado. \n"
+                + "Al día siguiente tiene que llevar ropa que ya ha usado \nporque la mudanza nada que llegaba a sus clases \nregulares y para cuando vuelve el camión ya está esperándola \ny comienza a descargar sus cosas. \n";
         o1.setVisible(false);
         o2.setVisible(false);
         o3.setVisible(true);
         o4.setVisible(true);
+        String txt2 = "Cuando ya ha terminado de acomodar todo, cuyo procesos le \nllevó 3 días está cansada y hambrienta decide ordenar \ncomida por rappi, tiene 15k en rappicreditos si come\nsushi le saldrá totalmente gratis, pero si coge \npizza tendrá que pagar 3k demás. ";
+        area.setText(txt + txt2);
+
+
     }//GEN-LAST:event_o1ActionPerformed
 
     private void o4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_o4ActionPerformed
-        // TODO add your handling code here:
+        String txt = "La chica elige pizza y espera su pedido, cuando llega \nse come la mitad y deja algunos pedazos para que desayune \nal día siguiente.";
+        o3.setVisible(false);
+        o4.setVisible(false);
+        o5.setVisible(true);
+        o6.setVisible(true);
+        String txt2 = "A la mañana siguiente se va a la universidad y se \nencuentra al indigente este la saluda alegremente, hay \nalgo en el que le recuerda a alguien pero no sabe a quien, \ncuando va caminando alguien grita su apellido y ella y \nel indigente voltean al mismo tiempo, ambos se miran extrañados.\n"
+                + "Señor: ¿Es usted apellido Perez señorita? \nHola, mi nombre es Jaime Perez.\n"
+                + "Ella sorprendida se da cuenta que el es su padre, el \nque la abandonó cuando era muy pequeña porque el tenia \nproblemas con el alcohol.\n"
+                + "Chica: Hola, mi nombre es Julia Pérez (miente)\n"
+                + "Señor: ¡vaya! tenemos el mismo apellido, que coincidencia\n"
+                + "la chica se despide del hombre y se dirige al paradero \nde buses, ella pensó que sentiría rabia al ver al hombre\nque le dio la vida pero que la abandonó a ella y a su \nmama despues de tantos años, pero sorprendentemente siente \nmucha pena por él, en el estado en el que está, se \ndejó consumir por el alcohol.\n"
+                + "la chica va a clase regular y cuando llega al \nedificio, encuentra a Jaime que está llorando.";
+        area.setText(txt + txt2);
+
     }//GEN-LAST:event_o4ActionPerformed
 
     private void o2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_o2ActionPerformed
-        String txt = "Luego de elegir el apartamento que quiere, llama al camión de la mudanza y mientras espera ve a un indigente que le pide dinero, ella en cambio le da comida, porque sabe que ese hombre debe de tener hambre, el hombre la mira con ojos tiernos y devora la comida que la chica le dió. \n"
-                + "El camión de la mudanza llega y ella empieza a descargar sus cosas. ";
-        String ant = area.getText();
-        area.setText(ant + txt);
+        String txt = "Luego de elegir el apartamento que quiere, llama al \ncamión de la mudanza y mientras espera ve a un indigente que \nle pide dinero, ella en cambio le da comida, porque sabe \nque ese hombre debe de tener hambre, el hombre la mira con \nojos tiernos y devora la comida que la chica le dió. \n"
+                + "El camión de la mudanza llega y ella empieza a descargar \nsus cosas. ";
         o1.setVisible(false);
         o2.setVisible(false);
         o3.setVisible(true);
         o4.setVisible(true);
+        String txt2 = "Cuando ya ha terminado de acomodar todo, cuyo procesos le \nllevó 3 días está cansada y hambrienta decide ordenar \ncomida por rappi, tiene 15k en rappicreditos si come\nsushi le saldrá totalmente gratis, pero si coge \npizza tendrá que pagar 3k demás. ";
+        area.setText(txt + txt2);
+
     }//GEN-LAST:event_o2ActionPerformed
+
+    private void o3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_o3ActionPerformed
+        String txt = "La chica elige sushi y espera su pedido, cuando llega \nella lo devora sin dejar nada, pero lastimosamente se \ndespierta a medianoche a vomitar porque el pescado crudo le cayó mal. \nY se verá obligada a estar yendo al baño cada cierto \ntiempo, pero no puede faltar a clases porque tiene un \nquiz muy importante.";
+        o3.setVisible(false);
+        o4.setVisible(false);
+        o5.setVisible(true);
+        o6.setVisible(true);
+        String txt2 = "A la mañana siguiente se va a la universidad y se \nencuentra al indigente este la saluda alegremente, hay \nalgo en el que le recuerda a alguien pero no sabe a quien, \ncuando va caminando alguien grita su apellido y ella y \nel indigente voltean al mismo tiempo, ambos se miran extrañados.\n"
+                + "Señor: ¿Es usted apellido Perez señorita? \nHola, mi nombre es Jaime Perez.\n"
+                + "Ella sorprendida se da cuenta que el es su padre, el \nque la abandonó cuando era muy pequeña porque el tenia \nproblemas con el alcohol.\n"
+                + "Chica: Hola, mi nombre es Julia Pérez (miente)\n"
+                + "Señor: ¡vaya! tenemos el mismo apellido, que coincidencia\n"
+                + "la chica se despide del hombre y se dirige al paradero \nde buses, ella pensó que sentiría rabia al ver al hombre\nque le dio la vida pero que la abandonó a ella y a su \nmama despues de tantos años, pero sorprendentemente siente \nmucha pena por él, en el estado en el que está, se \ndejó consumir por el alcohol.\n"
+                + "la chica va a clase regular y cuando llega al \nedificio, encuentra a Jaime que está llorando.";
+        area.setText(txt + txt2);
+
+    }//GEN-LAST:event_o3ActionPerformed
+
+    private void o5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_o5ActionPerformed
+        String txt = "Le pregunta qué le pasa, él le cuenta que está triste \nporque quiere dejar el alcohol pero se le hace muy \ndifícil, ella decide aconsejarle que se meta en un grupo \nde alcohólicos anónimos y reduzca las dosis de alcohol \npoco a poco, no lo suspenda tan bruscamente porque la \nansiedad que sentirán sera peor, el le agradece sus consejos le \nda las botellas de cerveza que tiene escondidas y le pide \nque las arroje a la basura, solo se quedaría con una, \nella hace y le desea buenas noches a Jaime y sube a su \napartamento.\n"
+                + "A la mañana siguiente cuando ella se dirige a la universidad \nse encuentra a Jaime y este le cuenta que ya se inscribió a \nun grupo de alcohólicos y hoy es su primera cita, ella \nle dice que si quiere después de que llegue de la universidad \npuede ir a asearse a su apartamento para ir bien presentado, \na pesar de no ser una entrevista él quiere hacer lo mejor \nporque es algo supremamente importante para el, Jaime \nacepta contento la oferta de la chica. \n"
+                + "jaime va a su reunión y se siente muy bien, decide \nir a contarle a la chica y ella lo felicita Jaime \nestá muy feliz por su avance.";
+        o5.setVisible(false);
+        o6.setVisible(false);
+        String txt2 = "";
+        area.setText(txt + txt2);
+    }//GEN-LAST:event_o5ActionPerformed
+
+    private void o6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_o6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_o6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -189,5 +276,7 @@ public class Texto extends javax.swing.JFrame {
     private javax.swing.JButton o2;
     private javax.swing.JButton o3;
     private javax.swing.JButton o4;
+    private javax.swing.JButton o5;
+    private javax.swing.JButton o6;
     // End of variables declaration//GEN-END:variables
 }
