@@ -15,8 +15,6 @@ public class ArteElectronico {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Test2 tx = new Test2();
-        tx.setVisible(true);
         testV v = new testV();
         v.setVisible(true);
     }
