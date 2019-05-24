@@ -17,6 +17,8 @@ public class ArteElectronico {
     public static void main(String[] args) {
         Test2 tx = new Test2();
         tx.setVisible(true);
+        testV v = new testV();
+        v.setVisible(true);
     }
     
 }
