@@ -17,7 +17,8 @@ public class Test2 extends javax.swing.JFrame {
     /**
      * Creates new form Texto
      */
-    public int Sel[]=new int [3];
+    public int Sel[]=new int [4];
+    public int Keypoint;
     public int SelO=1;
     public int SelO1=1;
     public int SelEsp;
@@ -66,6 +67,7 @@ public class Test2 extends javax.swing.JFrame {
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAlwaysOnTop(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Next.setText("Next");
@@ -108,7 +110,7 @@ public class Test2 extends javax.swing.JFrame {
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/A_blank_black_picture.jpg"))); // NOI18N
         Background.setText("jLabel2");
-        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 510));
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 510));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -123,10 +125,21 @@ public class Test2 extends javax.swing.JFrame {
             Random(Sel);
         }
         if(SelO==2){
-            
+            Text.setText(Opciones2[Sel[1]]);
+            for(int i=1;i<=3;i++){
+                Sel[i]=0;
+            }
+            Random(Sel);
+            allow=true;
         }
         if(SelO==3){
-            
+            Text.setText(Opciones3[Sel[1]]);
+            for(int i=1;i<=3;i++){
+                Sel[i]=0;
+            }
+            Keypoint=Sel[1];
+            Random(Sel);
+            allow=true;
         }
         if(SelO==4){
             
@@ -145,13 +158,29 @@ public class Test2 extends javax.swing.JFrame {
             allow=true;
         }
         if(SelO==2){
-            
+            Text.setText(Opciones2[Sel[2]]);
+            for(int i=1;i<=3;i++){
+                Sel[i]=0;
+            }
+            Random(Sel);
+            allow=true;
         }
         if(SelO==3){
-            
+            Text.setText(Opciones3[Sel[2]]);
+            for(int i=1;i<=3;i++){
+                Sel[i]=0;
+            }
+            Keypoint=Sel[2];
+            Random(Sel);
+            allow=true;
         }
         if(SelO==4){
-            
+            Text.setText(Opciones4[Sel[2]]);
+            for(int i=1;i<=3;i++){
+                Sel[i]=0;
+            }
+            Random(Sel);
+            allow=true;
         }
     }//GEN-LAST:event_Ing2ActionPerformed
 
@@ -270,13 +299,15 @@ public class Test2 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Texto().setVisible(true);
+                new Test2().setVisible(true);
             }
         });
     }
+    
+    
     public static void Random(int Opciones[]){
         Random Generar = new Random();
-        for(int i =1;i<=2;i++){
+        for(int i=1;i<=3;i++){
             int Aux = Generar.nextInt(2)+1;
             if(!comprobarNumero(Aux,Opciones)){
                 Opciones[i]=Aux;
@@ -287,7 +318,7 @@ public class Test2 extends javax.swing.JFrame {
         }
     }
     public static boolean comprobarNumero(int num,int Al[]){
-               for(int i=1;i<=2;i++){
+               for(int i=1;i<=3;i++){
                        if(Al[i]==num){
                             return true;
                        }
