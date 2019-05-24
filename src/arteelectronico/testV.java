@@ -168,6 +168,9 @@ public class testV extends javax.swing.JFrame {
                     SelO++;
                     allow=false;
                     denied=true;
+                    Ing1.setVisible(true);
+                    Ing2.setVisible(true);
+                    Next.setVisible(false);
                     break;
                 }
                 case 2:{
@@ -191,6 +194,9 @@ public class testV extends javax.swing.JFrame {
                             SelO1=1;
                             allow=false;
                             denied=true;
+                            Ing1.setVisible(true);
+                            Ing2.setVisible(true);
+                            Next.setVisible(false);
                             SelO++;
                             break;
                         }
@@ -205,10 +211,13 @@ public class testV extends javax.swing.JFrame {
                                 break;
                             }
                             case 2:{
-                                Text.setText("la chica se siente un poco mal al escuchar eso, \ntodavía no sabe si decirle que ella es su hija, pero la verdad no quiere sentir que él \nal saber eso va a estar con ella por compromiso o porque realmente la ama y la extrañó después de tantos años, \npero no quiere averiguarlo, simplemente no le dirá.");
+                                Text.setText("la chica se siente un poco mal al escuchar eso, \ntodavía no sabe si decirle que ella es su hija, pero la verdad no quiere sentir que él \nal saber eso va a estar con ella por compromiso o porque realmente la ama \ny la extrañó después de tantos años, pero no quiere averiguarlo, \nsimplemente no le dirá.");
                                 SelO1=1;
                                 allow=false;
                                 denied=true;
+                                Ing1.setVisible(true);
+                                Ing2.setVisible(true);
+                                 Next.setVisible(false);
                                 SelO++;
                                 break;
                             }
@@ -221,56 +230,62 @@ public class testV extends javax.swing.JFrame {
                             Text.setText("Jaime al estar sobrio empieza a recordar, \nle cuenta a la chica que está arrepentido de haber dejado perder el control de su vida,\n por causa del alcohol, y le dice que le gustaría poder reencontrarse con su familia \ny pedirles perdón por haberles abandonado. \nY que además ahora que consiguió un trabajo, puede ayudarles con los gastos");
                             allow=false;
                             denied=true;
+                            Ing1.setVisible(true);
+                            Ing2.setVisible(true);
+                            Next.setVisible(false);
                             SelO++;
                             break;
                         }
                         case 2:{
                             switch(SelO2){
                                 case 1:{
-                                    Text.setText("Después de varios días la chica no ha vuelto a ver al indigente que era su padre. Al salir hacia la universidad se encuentra con una de sus vecinas y caminan juntas a tomar el bus. ");
+                                    Text.setText("Después de varios días la chica no ha vuelto a ver al indigente que era su padre. \nAl salir hacia la universidad se encuentra con una de sus vecinas y caminan juntas a tomar el bus. ");
                                     SelO2++;
                                     break;
                                 }
                                 case 2:{
-                                    Text.setText("De camino a la parada de bus pasan por la esquina en la que siempre estaba Jaime y su vecina le dice que desde que internaron a Jaime ahora el barrio se veía limpio y no lleno de la basura con la que este convive");
+                                    Text.setText("De camino a la parada de bus pasan por la esquina en la que siempre estaba Jaime \nSu vecina le dice que desde que internaron a Jaime ahora el barrio se veía limpio \nY no lleno de la basura con la que este convive");
                                     SelO2++;
                                     break;
                                 }
                                 case 3:{
-                                    Text.setText("La chica al escuchar esto queda en shock y le pregunta a su vecina en cual hospital lo tienen internado, ella le responde y luego la chica le pide que se adelante, que olvidó algo en casa");
+                                    Text.setText("La chica al escuchar esto queda en shock y le pregunta a su vecina \nEn cual hospital lo tienen internado, ella le responde y \nluego la chica le pide que se adelante, que olvidó algo en casa");
                                     SelO2++;
                                     break;
                                 }
                                 case 4:{
-                                    Text.setText("La chica corre a su casa y se encierra a llorar, porque a pesar de no querer entablar una relación con su padre, sigue siendo su padre, sale del edificio, toma un taxi y llega al hospital, pregunta por Jaime Pérez y la enferma le cuenta que el necesita un trasplante de hígado o morirá");
+                                    Text.setText("La chica corre a su casa y se encierra a llorar, porque a pesar de \nNo querer entablar una relación con su padre, sigue siendo su padre, \nsale del edificio, toma un taxi y llega al hospital, pregunta por Jaime Pérez y la enferma le cuenta que \nel necesita un trasplante de hígado o morirá");
                                     SelO2++;
                                     break;
                                 }
                                 case 5:{
-                                    Text.setText("para que un alcohólico reciba una donación debe de tener por lo menos 1 año de sobriedad y Jaime no cumple con esa característica, así que no califica en la lista");
+                                    Text.setText("para que un alcohólico reciba una donación debe de tener \npor lo menos 1 año de sobriedad y Jaime no cumple con esa característica, \nasí que no califica en la lista");
                                     SelO2++;
                                     break;
                                 }
                                 case 6:{
-                                    Text.setText("la única manera de recibir el higado es que un familiar donde por el, al escuchar eso, la chica le dice a la enferma que ella es su hija y se quiere hacer los exámenes de compatibilidad para ver si es apta para donar o no");
+                                    Text.setText("la única manera de recibir el higado es que un familiar donde por el, \nal escuchar eso, la chica le dice a la enferma que ella es su hija \ny se quiere hacer los exámenes de compatibilidad para ver si es apta para donar o no");
                                     SelO2++;
                                     break;
                                 }
                                 case 7:{
-                                    Text.setText("luego de una larga espera, los exámenes salen positivos; la chica va corriendo a la habitación de su papá y le dice que encontraron un donante para él y ");
+                                    Text.setText("luego de una larga espera, los exámenes salen positivos; \nla chica va corriendo a la habitación de su papá y le dice que encontraron un donante para él y ");
                                     SelO2++;
                                     break;
                                 }
                                 case 8:{
-                                    Text.setText("el sorprendido dice que no lo puede creer que el no esta en la lista pero la chica le dice que es ella quien va a donarle un pedazo de su hígado");
+                                    Text.setText("el sorprendido dice que no lo puede creer que el no esta en \nla lista pero la chica le dice que es ella quien va a donarle un pedazo de su hígado");
                                     SelO2++;
                                     break;
                                 }
                                 case 9:{
-                                    Text.setText("y le dice que queda en él la decision, si lo acepta o no, le dice su verdadero nombre, monica perez y cae en la cuenta de que ella es su hija.");
+                                    Text.setText("y le dice que queda en él la decision, si lo acepta o no, \nle dice su verdadero nombre, Mónica Pérez y cae en la cuenta de que ella es su hija.");
                                     SelO2=1;
                                     allow=false;
                                     denied=true;
+                                    Ing1.setVisible(true);
+                                    Ing2.setVisible(true);
+                                    Next.setVisible(false);
                                     SelO++;
                                     break;
                                 }
@@ -283,6 +298,11 @@ public class testV extends javax.swing.JFrame {
                 }
                 case 5:{
                     SelO++;
+                    allow=false;
+                    denied=true;
+                    Ing1.setVisible(true);
+                    Ing2.setVisible(true);
+                    Next.setVisible(false);
                     break;
                 }
                 
@@ -303,6 +323,9 @@ public class testV extends javax.swing.JFrame {
                 Random(Sel);
                 allow=true;
                 denied=false;
+                Ing1.setVisible(false);
+                Ing2.setVisible(false);
+                Next.setVisible(true);
             }
             if(SelO==2){
                 Text.setText(Opciones2[Sel[2]]);
@@ -312,34 +335,86 @@ public class testV extends javax.swing.JFrame {
                 Random(Sel);
                 allow=true;
                 denied=false;
+                Ing1.setVisible(false);
+                Ing2.setVisible(false);
+                Next.setVisible(true);
             }
             if(SelO==3){
                 Text.setText(Opciones3[Sel[2]]);
+                Keypoint=Sel[2];
                 for(int i=1;i<=3;i++){
                     Sel[i]=0;
                 }
-                Keypoint=Sel[2];
                 Random(Sel);
                 allow=true;
                 denied=false;
+                Ing1.setVisible(false);
+                Ing2.setVisible(false);
+                Next.setVisible(true);
             }
             if(SelO==4){
                 switch(Keypoint){
                     case 1:{
                         SelEsp=1;
-                        JOptionPane.showMessageDialog(null,"Presione Next para continurar","Avance",JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null,"Presione Next para continuar","Avance",JOptionPane.INFORMATION_MESSAGE);
                         allow=true;
                         denied=false;
+                        Ing1.setVisible(false);
+                        Ing2.setVisible(false);
+                        Next.setVisible(true);
+                        break;
                     }
                     case 2:{
                         SelEsp=2;
-                        JOptionPane.showMessageDialog(null,"Presione Next para continurar","Avance",JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null,"Presione Next para continuar","Avance",JOptionPane.INFORMATION_MESSAGE);
                         allow=true;
                         denied=false;
+                        Ing1.setVisible(false);
+                        Ing2.setVisible(false);
+                        Next.setVisible(true);
+                        break;
                     }
                 }
                 allow=true;
                 denied=false;
+                for(int i=1;i<=3;i++){
+                    Sel[i]=0;
+                }
+                Random(Sel);
+            }
+            if(SelO==5){
+                if(Keypoint==1){
+                    switch(Sel[2]){
+                        case 1:{
+                            Text.setText(Opciones4[Sel[2]]);
+                            denied=false;
+                            Ing1.setVisible(false);
+                            Ing2.setVisible(false);
+                            Next.setVisible(true);
+                            break;
+                        }
+                        case 2:{
+                            Text.setText(Opciones4[Sel[2]]);
+                            JOptionPane.showMessageDialog(null,"Presione Next para continuar","Avance",JOptionPane.INFORMATION_MESSAGE);
+                            denied=false;
+                            allow=true;
+                            Next.setVisible(true);
+                            
+                            break;
+                        }
+                    }
+                }else{
+                    Text.setText(Opciones6[Sel[2]]);
+                    Ing1.setVisible(false);
+                    Ing2.setVisible(false);
+                    Next.setVisible(false);
+                }
+            }
+            if(SelO==6){
+                Text.setText(Opciones4Esp[Sel[2]]);
+                Ing1.setVisible(false);
+                Ing2.setVisible(false);
+                Next.setVisible(false);
             }
         }else{
             JOptionPane.showMessageDialog(null,"Todavia tienes mensajes por ver, Dale a Next para continuar","Error",JOptionPane.ERROR_MESSAGE);
@@ -357,6 +432,10 @@ public class testV extends javax.swing.JFrame {
                 Random(Sel);
                 allow=true;
                 denied=false;
+                Ing1.setVisible(false);
+                Ing2.setVisible(false);
+                Next.setVisible(true);
+                           
             }
             if(SelO==2){
                 Text.setText(Opciones2[Sel[1]]);
@@ -366,25 +445,35 @@ public class testV extends javax.swing.JFrame {
                 Random(Sel);
                 allow=true;
                 denied=false;
+                Ing1.setVisible(false);
+                Ing2.setVisible(false);
+                Next.setVisible(true);
             }
             if(SelO==3){
                 Text.setText(Opciones3[Sel[1]]);
+                Keypoint=Sel[1];
                 for(int i=1;i<=3;i++){
                     Sel[i]=0;
                 }
-                Keypoint=Sel[1];
                 Random(Sel);
                 allow=true;
                 denied=false;
+                Ing1.setVisible(false);
+                Ing2.setVisible(false);
+                Next.setVisible(true);
                 
             }
             if(SelO==4){
+                
                 switch(Keypoint){
                     case 1:{
                         SelEsp=1;
                         JOptionPane.showMessageDialog(null,"Presione Next para continuar","Avance",JOptionPane.INFORMATION_MESSAGE);
                         allow=true;
                         denied=false;
+                        Ing1.setVisible(false);
+                        Ing2.setVisible(false);
+                        Next.setVisible(true);
                         break;
                     }
                     case 2:{
@@ -392,11 +481,17 @@ public class testV extends javax.swing.JFrame {
                         JOptionPane.showMessageDialog(null,"Presione Next para continuar","Avance",JOptionPane.INFORMATION_MESSAGE);
                         allow=true;
                         denied=false;
+                        Ing1.setVisible(false);
+                        Ing2.setVisible(false);
+                        Next.setVisible(true);
                         break;
                     }
                 }
                 allow=true;
                 denied=false;
+                Ing1.setVisible(false);
+                Ing2.setVisible(false);
+                Next.setVisible(true);
                 for(int i=1;i<=3;i++){
                     Sel[i]=0;
                 }
@@ -408,6 +503,9 @@ public class testV extends javax.swing.JFrame {
                         case 1:{
                             Text.setText(Opciones4[Sel[1]]);
                             denied=false;
+                            Ing1.setVisible(false);
+                            Ing2.setVisible(false);
+                            Next.setVisible(false);
                             break;
                         }
                         case 2:{
@@ -418,12 +516,24 @@ public class testV extends javax.swing.JFrame {
                             break;
                         }
                     }
+                }
+                else{
+                    Text.setText(Opciones6[Sel[1]]);
+                    Ing1.setVisible(false);
+                    Ing2.setVisible(false);
+                    Next.setVisible(false);
+                }
             }
+            if(SelO==6){
+                Text.setText(Opciones4Esp[Sel[1]]);
+                Ing1.setVisible(false);
+                Ing2.setVisible(false);
+                Next.setVisible(false);
+            }
+        }
         else{
             JOptionPane.showMessageDialog(null,"Todavia tienes mensajes por ver, Dale a Next para continuar","Error",JOptionPane.ERROR_MESSAGE);
             }
-        }
-        }
     }//GEN-LAST:event_Ing1ActionPerformed
 
     /**
