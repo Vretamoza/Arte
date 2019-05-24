@@ -24,33 +24,38 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="Ing1" min="-2" pref="116" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                      <Component id="Ing1" min="-2" pref="131" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                       <Component id="Next" min="-2" pref="87" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                       <Component id="Ing2" min="-2" pref="135" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jScrollPane1" min="-2" pref="481" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="534" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace pref="63" max="32767" attributes="0"/>
+              <EmptySpace pref="30" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" pref="245" max="-2" attributes="0"/>
-              <EmptySpace pref="41" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="Ing1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Next" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
-                  <Component id="Ing2" alignment="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              <Component id="jScrollPane1" min="-2" pref="222" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="Ing1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Next" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="Ing2" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+              <EmptySpace pref="46" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -66,8 +71,11 @@
         <Component class="javax.swing.JTextArea" name="Text">
           <Properties>
             <Property name="columns" type="int" value="20"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Gadugi" size="14" style="0"/>
+            </Property>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Una chica que est&#xe1; en segundo a&#xf1;o &#xa;de derecho ha vuelto a la ciudad &#xa;donde creci&#xf3; despu&#xe9;s de haber hecho &#xa;su primer a&#xf1;o en otro pa&#xed;s. Est&#xe1; buscando &#xa;apartamentos que queden cerca de su &#xa;universidad para que todo sea m&#xe1;s f&#xe1;cil. &#xa;Encuentra dos apartamentos &#xa;1. 5 minutos de la universidad pero por un camino &#xa;totalmente solo y peligroso &#xa;2. 20 minutos de la universidad pero por un camino &#xa;m&#xe1;s transitado, pero al ser m&#xe1;s transitado ocurren &#xa;muchos trancones. &#xa;"/>
+            <Property name="text" type="java.lang.String" value="Una chica que est&#xe1; en segundo a&#xf1;o de derecho ha vuelto a la ciudad &#xa;donde creci&#xf3; despu&#xe9;s de haber hecho su primer a&#xf1;o en otro pa&#xed;s. &#xa;Est&#xe1; buscando apartamentos que queden cerca de su universidad para &#xa;que todo sea m&#xe1;s f&#xe1;cil. Ella encuentra dos apartamentos &#xa;1. 5 minutos de la universidad pero por un camino &#xa;totalmente solo y peligroso &#xa;2. 20 minutos de la universidad pero por un camino &#xa;m&#xe1;s transitado, pero al ser m&#xe1;s transitado ocurren &#xa;muchos trancones. &#xa;"/>
           </Properties>
         </Component>
       </SubComponents>

@@ -23,6 +23,7 @@ public class testV extends javax.swing.JFrame {
     public int SelEsp;
     public int SelO2=1;
     public boolean allow=false;
+    public boolean denied=true;
     
   public String Opciones1[] = {"","Cuando encuentra el apartamento que quería, empieza \na llamar al camión de la mudanza, esperando en la acera \na que el camión llegue se encuentre con un indigente que \nle pide dinero ella lo observa y le da 4 mil pesos porque \nsabe que ese hombre debe de estar pasando hambre; muy a su\npesar el hombre se levanta se mete a la tienda que queda\\nenfrente de su casa a comprar alcohol y emborracharse. \n" +
                                  "El camión de mudanza nunca llega, llegaría dentro de \nun día , porque los hombres se perdieron por \nel camino peligroso y nada transitado. \n" +
@@ -41,15 +42,20 @@ public class testV extends javax.swing.JFrame {
                                         "hacen contacto visual y sigue su camino hasta llegar a su apartamento\npero los sollozos de Jaime no la dejan dormir.\n" +
                                         "a la mañana siguiente ve a Jaime con los ojos rojos de tanto llorar \ny ella igual porque no pudo pegar ojo en toda la noche \npor los sollozos de él se siente fatal por no haberlo ayudado, \npero ella no le debe nada, decide seguir de largo e irse \na la universidad. \ncuando ella vuelve de la universidad encuentra a Jaime \nborracho lleno de basura. decide no mirar y sube \na su apartamento, escucha golpes, Jaime está recibiendo \nuna paliza, lo dejan tendido en el piso, ella solo puede mirar, no\npuede hacer más nada, al fin de cuentas él no es su papá\n"};
        
-    public String Opciones4[] = {"","Decirle que ella es su hija ","Decirle que lo mejor es que siga con su vida"};
+    public String Opciones4[] = {"","La chica le dice que ella es su hija, Jaime rompe en llanto y le pide perdón por todo,\n le dice que espera tener la oportunidad de reparar todo el daño que le causó,\n y que le gustaría recuperar el tiempo perdido. La chica también llorando lo perdona \nle dice que a pesar de haberse sentido mal toda su vida por el abandono\n , se sentía mejor sabiendo que su relación ahora iba a estar mejor que antes.\n Jaime se muda con ella y con su nuevo trabajo ayuda a la chica con sus gastos\n y logran tener la relación de padre e hija que no habían podido tener. ",
+        "Jaime se enfoca en su trabajo y se le presenta la oportunidad de irse a trabajar a otra ciudad con un sueldo mejor.\n Como se había encariñado con la chica, este le cuenta sobre esta oportunidad. "};
     
-    public String Opciones6[] = {"","Jaime acepta","Jaime Rechaza"};
+    public String Opciones4Esp[] ={"","Jaime rompe en llanto y le pide perdón por todo,\n le dice que espera tener la oportunidad de reparar todo el daño que le causó,\n y que le gustaría recuperar el tiempo perdido. La chica también llorando lo perdona \n le dice que a pesar de haberse sentido mal toda su vida por el abandono de su padre,\n se sentía mejor sabiendo que su relación ahora iba a estar mejor que antes y \nque le gustaría que él hiciera parte de su vida",
+        
+        "Ël se va y nunca se entera que todo este tiempo estuvo conviviendo con su hija\n, y que gracias a ella es una mejor persona."};
+    
+    public String Opciones6[] = {"","se hacen la operacion, sale exitosa, y cuando salen del hospital ambos,\n Jaime decide ir a un grupo de apoyo para darle una mejor vida a Mónica,\n y recuperar el tiempo perdido, claramente el hecho de ser como un padre y una hija normales\n no entra en lo planes de Mónica, pero poco a poco lo va aceptando",
+        
+        "le dice que ya le quitó su infancia no le quitara mas nada, eventualmente el muere,\n y luego de algunos años cuando ella está recibiendo grado de derecho mira hacia la tribuna y \nve en el público la imagen de Jaime sonriente y orgulloso de su pequeña niña"};
     
     public testV() {
         initComponents();
         Random(Sel);
-        JOptionPane.showMessageDialog(null,Sel[1]);
-        JOptionPane.showMessageDialog(null,Sel[2]);
     }
     public static void Random(int Opciones[]){
         Random Generar = new Random();
@@ -90,8 +96,9 @@ public class testV extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Text.setColumns(20);
+        Text.setFont(new java.awt.Font("Gadugi", 0, 14)); // NOI18N
         Text.setRows(5);
-        Text.setText("Una chica que está en segundo año \nde derecho ha vuelto a la ciudad \ndonde creció después de haber hecho \nsu primer año en otro país. Está buscando \napartamentos que queden cerca de su \nuniversidad para que todo sea más fácil. \nEncuentra dos apartamentos \n1. 5 minutos de la universidad pero por un camino \ntotalmente solo y peligroso \n2. 20 minutos de la universidad pero por un camino \nmás transitado, pero al ser más transitado ocurren \nmuchos trancones. \n");
+        Text.setText("Una chica que está en segundo año de derecho ha vuelto a la ciudad \ndonde creció después de haber hecho su primer año en otro país. \nEstá buscando apartamentos que queden cerca de su universidad para \nque todo sea más fácil. Ella encuentra dos apartamentos \n1. 5 minutos de la universidad pero por un camino \ntotalmente solo y peligroso \n2. 20 minutos de la universidad pero por un camino \nmás transitado, pero al ser más transitado ocurren \nmuchos trancones. \n");
         jScrollPane1.setViewportView(Text);
 
         Ing1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Webp.net-resizeimage.png"))); // NOI18N
@@ -122,63 +129,68 @@ public class testV extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(Ing1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(69, 69, 69)
+                        .addGap(46, 46, 46)
+                        .addComponent(Ing1, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(62, 62, 62)
                         .addComponent(Next, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(66, 66, 66)
                         .addComponent(Ing2, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(63, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 534, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Ing1)
-                    .addComponent(Next, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(Ing1)
+                        .addComponent(Next, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(Ing2))
-                .addGap(17, 17, 17))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void NextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextActionPerformed
-        JOptionPane.showMessageDialog(null,SelO);
+   
         if(allow==true){
             switch(SelO){
                 case 1:{
-                    Text.setText("Cuando ya ha terminado de acomodar todo, cuyo procesos le llevó 3 días está cansada y hambrienta decide ordenar comida por rappi, tiene 15k en rappicreditos si come sushi le saldrá totalmente gratis, pero si coge pizza tendrá que pagar 3k demás.");
+                    Text.setText("Cuando ya ha terminado de acomodar todo, \ncuyo procesos le llevó 3 días está cansada y hambrienta \ndecide ordenar comida por rappi, tiene 15k en rappicreditos \nsi come sushi le saldrá totalmente gratis, \npero si coge pizza tendrá que pagar 3k demás.");
                     SelO++;
                     allow=false;
+                    denied=true;
                     break;
                 }
                 case 2:{
                     switch(SelO1){
                         case 1:{
-                            Text.setText("A la mañana siguiente se va a la universidad y se encuentra al indigente este la saluda alegremente, hay algo en el que le recuerda a alguien pero no sabe a quien, cuando va caminando alguien grita su apellido y ella y el indigente voltean al mismo tiempo, ambos se miran extrañados.");
+                            Text.setText("A la mañana siguiente se va a la universidad y se encuentra al indigente \neste la saluda alegremente, \nhay algo en el que le recuerda a alguien pero no sabe a quien, \ncuando va caminando alguien grita su apellido \n y ella y el indigente voltean al mismo tiempo, \nambos se miran extrañados.");
                             SelO1++;
                             break;
                         }
                         case 2:{
                             Text.setText("Señor: ¿Es usted apellido Perez señorita? Hola, mi nombre es Jaime Perez\n" +
-                            "Ella sorprendida se da cuenta que el es su padre, el que la abandonó cuando era muy pequeña porque el tenia  problemas con el alcohol.\n" +
+                            "Ella sorprendida se da cuenta que el es su padre, \nel que la abandonó cuando era muy pequeña porque el tenia  problemas con el alcohol.\n" +
                             "Chica: Hola, mi nombre es Julia Pérez (miente)\n" +
                             "Señor: ¡vaya! tenemos el mismo apellido, que coincidencia");
                             SelO1++;
                             break;
                         }
                         case 3:{
-                            Text.setText("la chica se despide del hombre y se dirige al paradero de buses, ella pensó que sentiría rabia al ver al hombre que le dio la vida pero que la abandonó a ella y a su mama despues de tantos años, pero sorprendentemente siente mucha pena por él, en el estado en el que está, se dejó consumir por el alcohol.\n" +
+                            Text.setText("la chica se despide del hombre y se dirige al paradero de buses, \nella pensó que sentiría rabia al ver al hombre que le dio la vida pero que la abandonó a ella \ny a su mama despues de tantos años, pero sorprendentemente siente mucha pena por él, \nen el estado en el que está, se dejó consumir por el alcohol.\n" +
                              "la chica va a clase regular y cuando llega al edificio, encuentra a Jaime que está llorando.");
                             SelO1=1;
                             allow=false;
+                            denied=true;
                             SelO++;
                             break;
                         }
@@ -188,14 +200,15 @@ public class testV extends javax.swing.JFrame {
                 case 3:{
                         switch(SelO1){
                             case 1:{
-                                Text.setText("Ya han pasado varios meses desde que jaime estuvo llorando, la chica y Jaime han hablado más los últimos meses, escucho de los vecino que tuvo una hija, pero que la abandonó y se arrepiente de ella cada dia pero no puede hacer nada ahora mismo.");
+                                Text.setText("Ya han pasado varios meses desde que jaime estuvo llorando, \nla chica y Jaime han hablado más los últimos meses, escucho de los vecino que tuvo una hija, \npero que la abandonó y se arrepiente de ella cada dia pero no puede hacer nada ahora mismo.");
                                 SelO1++;
                                 break;
                             }
                             case 2:{
-                                Text.setText("la chica se siente un poco mal al escuchar eso, todavía no sabe si decirle que ella es su hija, pero la verdad no quiere sentir que él al saber eso va a estar con ella por compromiso o porque realmente la ama y la extrañó después de tantos años, pero no quiere averiguarlo, simplemente no le dirá.");
+                                Text.setText("la chica se siente un poco mal al escuchar eso, \ntodavía no sabe si decirle que ella es su hija, pero la verdad no quiere sentir que él \nal saber eso va a estar con ella por compromiso o porque realmente la ama y la extrañó después de tantos años, \npero no quiere averiguarlo, simplemente no le dirá.");
                                 SelO1=1;
                                 allow=false;
+                                denied=true;
                                 SelO++;
                                 break;
                             }
@@ -205,7 +218,10 @@ public class testV extends javax.swing.JFrame {
                 case 4:{
                     switch(SelEsp){
                         case 1:{
-                            Text.setText("Jaime al estar sobrio empieza a recordar y le cuenta a la chica que está arrepentido de haber dejado perder el control de su vida por causa del alcohol, y le dice que le gustaría poder reencontrarse con su familia y pedirles perdón por haberles abandonado. Y que además ahora que consiguió un trabajo, puede ayudarles con los gastos");
+                            Text.setText("Jaime al estar sobrio empieza a recordar, \nle cuenta a la chica que está arrepentido de haber dejado perder el control de su vida,\n por causa del alcohol, y le dice que le gustaría poder reencontrarse con su familia \ny pedirles perdón por haberles abandonado. \nY que además ahora que consiguió un trabajo, puede ayudarles con los gastos");
+                            allow=false;
+                            denied=true;
+                            SelO++;
                             break;
                         }
                         case 2:{
@@ -254,6 +270,8 @@ public class testV extends javax.swing.JFrame {
                                     Text.setText("y le dice que queda en él la decision, si lo acepta o no, le dice su verdadero nombre, monica perez y cae en la cuenta de que ella es su hija.");
                                     SelO2=1;
                                     allow=false;
+                                    denied=true;
+                                    SelO++;
                                     break;
                                 }
                                 
@@ -261,7 +279,13 @@ public class testV extends javax.swing.JFrame {
                             break;
                         }
                     }
+                    break;
                 }
+                case 5:{
+                    SelO++;
+                    break;
+                }
+                
             }
         }
         else{
@@ -270,69 +294,135 @@ public class testV extends javax.swing.JFrame {
     }//GEN-LAST:event_NextActionPerformed
 
     private void Ing2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ing2ActionPerformed
-        if(SelO==1){
-            Text.setText(Opciones1[Sel[2]]);
-            for(int i=1;i<=3;i++){
-                Sel[i]=0;
+        if(denied==true){    
+            if(SelO==1){
+                Text.setText(Opciones1[Sel[2]]);
+                for(int i=1;i<=3;i++){
+                    Sel[i]=0;
+                }
+                Random(Sel);
+                allow=true;
+                denied=false;
             }
-            Random(Sel);
-            allow=true;
-        }
-        if(SelO==2){
-            Text.setText(Opciones2[Sel[2]]);
-            for(int i=1;i<=3;i++){
-                Sel[i]=0;
+            if(SelO==2){
+                Text.setText(Opciones2[Sel[2]]);
+                for(int i=1;i<=3;i++){
+                    Sel[i]=0;
+                }
+                Random(Sel);
+                allow=true;
+                denied=false;
             }
-            Random(Sel);
-            allow=true;
-        }
-        if(SelO==3){
-            Text.setText(Opciones3[Sel[2]]);
-            for(int i=1;i<=3;i++){
-                Sel[i]=0;
+            if(SelO==3){
+                Text.setText(Opciones3[Sel[2]]);
+                for(int i=1;i<=3;i++){
+                    Sel[i]=0;
+                }
+                Keypoint=Sel[2];
+                Random(Sel);
+                allow=true;
+                denied=false;
             }
-            Keypoint=Sel[2];
-            Random(Sel);
-            allow=true;
-        }
-        if(SelO==4){
-            Text.setText(Opciones4[Sel[2]]);
-            for(int i=1;i<=3;i++){
-                Sel[i]=0;
+            if(SelO==4){
+                switch(Keypoint){
+                    case 1:{
+                        SelEsp=1;
+                        JOptionPane.showMessageDialog(null,"Presione Next para continurar","Avance",JOptionPane.INFORMATION_MESSAGE);
+                        allow=true;
+                        denied=false;
+                    }
+                    case 2:{
+                        SelEsp=2;
+                        JOptionPane.showMessageDialog(null,"Presione Next para continurar","Avance",JOptionPane.INFORMATION_MESSAGE);
+                        allow=true;
+                        denied=false;
+                    }
+                }
+                allow=true;
+                denied=false;
             }
-            Random(Sel);
-            allow=true;
+        }else{
+            JOptionPane.showMessageDialog(null,"Todavia tienes mensajes por ver, Dale a Next para continuar","Error",JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_Ing2ActionPerformed
 
     private void Ing1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ing1ActionPerformed
-        if(SelO==1){
-            Text.setText(Opciones1[Sel[1]]);
-            for(int i=1;i<=3;i++){
-                Sel[i]=0;
+        
+        if(denied==true){
+            if(SelO==1){
+                Text.setText(Opciones1[Sel[1]]);
+                for(int i=1;i<=3;i++){
+                    Sel[i]=0;
+                }
+                Random(Sel);
+                allow=true;
+                denied=false;
             }
-            Random(Sel);
-            allow=true;
-        }
-        if(SelO==2){
-            Text.setText(Opciones2[Sel[1]]);
-            for(int i=1;i<=3;i++){
-                Sel[i]=0;
+            if(SelO==2){
+                Text.setText(Opciones2[Sel[1]]);
+                for(int i=1;i<=3;i++){
+                    Sel[i]=0;
+                }
+                Random(Sel);
+                allow=true;
+                denied=false;
             }
-            Random(Sel);
-            allow=true;
-        }
-        if(SelO==3){
-            Text.setText(Opciones3[Sel[1]]);
-            for(int i=1;i<=3;i++){
-                Sel[i]=0;
+            if(SelO==3){
+                Text.setText(Opciones3[Sel[1]]);
+                for(int i=1;i<=3;i++){
+                    Sel[i]=0;
+                }
+                Keypoint=Sel[1];
+                Random(Sel);
+                allow=true;
+                denied=false;
+                
             }
-            Keypoint=Sel[1];
-            Random(Sel);
-            allow=true;
+            if(SelO==4){
+                switch(Keypoint){
+                    case 1:{
+                        SelEsp=1;
+                        JOptionPane.showMessageDialog(null,"Presione Next para continuar","Avance",JOptionPane.INFORMATION_MESSAGE);
+                        allow=true;
+                        denied=false;
+                        break;
+                    }
+                    case 2:{
+                        SelEsp=2;
+                        JOptionPane.showMessageDialog(null,"Presione Next para continuar","Avance",JOptionPane.INFORMATION_MESSAGE);
+                        allow=true;
+                        denied=false;
+                        break;
+                    }
+                }
+                allow=true;
+                denied=false;
+                for(int i=1;i<=3;i++){
+                    Sel[i]=0;
+                }
+                Random(Sel);
+            }
+            if(SelO==5){
+                if(Keypoint==1){
+                    switch(Sel[1]){
+                        case 1:{
+                            Text.setText(Opciones4[Sel[1]]);
+                            denied=false;
+                            break;
+                        }
+                        case 2:{
+                            Text.setText(Opciones4[Sel[1]]);
+                            JOptionPane.showMessageDialog(null,"Presione Next para continuar","Avance",JOptionPane.INFORMATION_MESSAGE);
+                            denied=false;
+                            allow=true;
+                            break;
+                        }
+                    }
+            }
+        else{
+            JOptionPane.showMessageDialog(null,"Todavia tienes mensajes por ver, Dale a Next para continuar","Error",JOptionPane.ERROR_MESSAGE);
+            }
         }
-        if(SelO==4){
-            
         }
     }//GEN-LAST:event_Ing1ActionPerformed
 
