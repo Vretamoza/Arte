@@ -41,7 +41,10 @@ public class Texto extends javax.swing.JFrame {
             "\"hacen contacto visual y sigue su camino hasta llegar a su apartamento\\ pero los sollozos de Jaime no la dejan dormir.\n" +
 "\"a la mañana siguiente ve a Jaime con los ojos rojos de tanto llorar \\ y ella igual porque no pudo pegar ojo en toda la noche por los sollozos de él \\ se siente fatal por no haberlo ayudado, pero ella no le debe nada,\\  decide seguir de largo e irse a la universidad.\\ cuando ella vuelve de la universidad encuentra a Jaime borracho lleno de basura.\\ decide no mirar y sube a su apartamento, escucha golpes, Jaime está recibiendo una paliza,\\ lo dejan tendido en el piso, ella solo puede mirar, no puede hacer más nada, \\ al fin de cuentas él no es su papá"};
        
-        String Opciones4[] = {"",""};
+        String Opciones4[] = {"Decirle que ella es su hija ","Decirle que lo mejor es que siga con su vida"};
+        
+        
+        String Opciones6[] = {"Jaime acepta","Jaime Rechaza"};
     }
 
     /**
