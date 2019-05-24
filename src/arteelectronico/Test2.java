@@ -183,20 +183,19 @@ public class Test2 extends javax.swing.JFrame {
             }
             if(SelO==3){
                 if(SelO1==1){
-                Text.setText("Ya han pasado varios meses desde que jaime estuvo llorando, la chica y Jaime han hablado más los últimos meses, escucho de los vecino que tuvo una hija, pero que la abandonó y se arrepiente de ella cada dia pero no puede hacer nada ahora mismo.");
-                SelO1++;
-            }
-            if(SelO1==2){
-                Text.setText("la chica se siente un poco mal al escuchar eso, todavía no sabe si decirle que ella es su hija, pero la verdad no quiere sentir que él al saber eso va a estar con ella por compromiso o porque realmente la ama y la extrañó después de tantos años, pero no quiere averiguarlo, simplemente no le dirá.");
-                SelO1=1;
-                allow=false;
-            }
-                
+                    Text.setText("Ya han pasado varios meses desde que jaime estuvo llorando, la chica y Jaime han hablado más los últimos meses, escucho de los vecino que tuvo una hija, pero que la abandonó y se arrepiente de ella cada dia pero no puede hacer nada ahora mismo.");
+                    SelO1++;
+                }
+                if(SelO1==2){
+                    Text.setText("la chica se siente un poco mal al escuchar eso, todavía no sabe si decirle que ella es su hija, pero la verdad no quiere sentir que él al saber eso va a estar con ella por compromiso o porque realmente la ama y la extrañó después de tantos años, pero no quiere averiguarlo, simplemente no le dirá.");
+                    SelO1=1;
+                    allow=false;
+                }              
             }
             if(SelO==4){
                 if(SelEsp==1){
                     Text.setText("Jaime al estar sobrio empieza a recordar y le cuenta a la chica que está arrepentido de haber dejado perder el control de su vida por causa del alcohol, y le dice que le gustaría poder reencontrarse con su familia y pedirles perdón por haberles abandonado. Y que además ahora que consiguió un trabajo, puede ayudarles con los gastos");
-            }
+                }
                 if(SelEsp==2){
                     if(SelO2==1){
                         Text.setText("Después de varios días la chica no ha vuelto a ver al indigente que era su padre. Al salir hacia la universidad se encuentra con una de sus vecinas y caminan juntas a tomar el bus. ");
@@ -216,21 +215,24 @@ public class Test2 extends javax.swing.JFrame {
                     }
                     if(SelO2==5){
                         Text.setText("para que un alcohólico reciba una donación debe de tener por lo menos 1 año de sobriedad y Jaime no cumple con esa característica, así que no califica en la lista");
+                        SelO2++;
                     }
                     if(SelO2==6){
                         Text.setText("la única manera de recibir el higado es que un familiar donde por el, al escuchar eso, la chica le dice a la enferma que ella es su hija y se quiere hacer los exámenes de compatibilidad para ver si es apta para donar o no");
+                        SelO2++;
                     }
                     if(SelO2==7){
                         Text.setText("luego de una larga espera, los exámenes salen positivos; la chica va corriendo a la habitación de su papá y le dice que encontraron un donante para él y ");
+                        SelO2++;
                     }
                     if(SelO2==8){
                         Text.setText("el sorprendido dice que no lo puede creer que el no esta en la lista pero la chica le dice que es ella quien va a donarle un pedazo de su hígado");
+                        SelO2++;
                     }
-                    if(SelO2==8){
+                    if(SelO2==9){
                         Text.setText("y le dice que queda en él la decision, si lo acepta o no, le dice su verdadero nombre, monica perez y cae en la cuenta de que ella es su hija.");
-                    }
-                    if(SelO2==8){
-                        Text.setText("");
+                        SelO2=1;
+                        allow=false;
                     }
                     
             }
